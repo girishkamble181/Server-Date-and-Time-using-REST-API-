@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Login Page {% endblock %}
+
+{% block content %}
+<h1>Login Page</h1>
+<form method="POST">
+{% csrf_token %}		
+
+	<input type="text" placeholder="enter username" name="un" required>
+<br><br>
+	<input type="password" placeholder="enter password" name="pw" required>
+<br><br>
+	<input type="Submit" value="Login">
+
+</form>
+{{ msg }}
+{% endblock %}
